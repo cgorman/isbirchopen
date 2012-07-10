@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120223012159) do
+ActiveRecord::Schema.define(:version => 20120710230739) do
 
   create_table "hours", :force => true do |t|
     t.integer  "open_hour"
@@ -28,6 +28,15 @@ ActiveRecord::Schema.define(:version => 20120223012159) do
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "name"
+    t.string   "hashed_password"
+    t.string   "salt"
+    t.boolean  "admin"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
 end
