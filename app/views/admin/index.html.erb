@@ -6,7 +6,7 @@ There <%= (@total_users == 1 ? "is" : "are") %> currently <%= pluralize(@total_u
 </p>
 <br />
 <p>
-Click here to <%=link_to "logout", logout_path %>
+Click here to <%=link_to "logout", logout_path, :method => :delete %>
 </p>
 <br />
 <p>
