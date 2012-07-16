@@ -8,6 +8,11 @@
 
 Location.delete_all
 Hour.delete_all
+User.delete_all
+
+# Users
+User.create(name: "cgorman", hashed_password: "e61f52e8d0c49946f666ced1621cddcb5b58885a0fd4b0d07d66b73a389df991", salt: "699219022749200.8266109078874294", admin: true)
+
 
 # Res
 hours = []

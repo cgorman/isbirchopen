@@ -1,6 +1,14 @@
-<h1>Admin</h1>
+<h2>Admin</h2>
 
 <p>It is <%= Time.now %>
 <br />
 There <%= (@total_users == 1 ? "is" : "are") %> currently <%= pluralize(@total_users, "user")%> regiestered
+</p>
+<br />
+<p>
+Click here to <%=link_to "logout", logout_path %>
+</p>
+<br />
+<p>
+<%= link_to "edit users", users_path %>
 </p>
